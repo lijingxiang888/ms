@@ -1,0 +1,150 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: Helvetica-Neue,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.main {
+    position: relative;
+    width: 7.5rem;
+    height: 100%;
+    background: url("../images/help-bg.png") no-repeat center;
+    background-size: cover;
+}
+.main .logo {
+    position: absolute;
+    left: .45rem;
+    top: .24rem;
+    width: 1.38rem;
+    height: .91rem;
+    background: url("../images/logo.png") no-repeat center;
+    background-size: cover;
+}
+.main .helpboard {
+    position: absolute;
+    left: 50%;
+    margin-left: -3.6rem;
+    width: 7.11rem;
+    height: 9.6rem;
+    background: url("../images/helpboard.png") no-repeat center;
+    background-size: cover;
+}
+.helpboard .avatar {
+    position: absolute;
+    left: 1.37rem;
+    top:2.38rem;
+    width: .97rem;
+    height: .97rem;
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.helpboard .avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.helpboard .content {
+    position: absolute;
+    left: 2.52rem;
+    top: 2.5rem;
+    width: 3.87rem;
+    overflow: hidden;
+}
+.helpboard .content .username {
+    width: 100%;
+    font-size: .25rem;
+    color: #733f16;
+    white-space: nowrap;
+}
+.helpboard .content .userscore {
+    width: 100%;
+    font-size: .38rem;
+    color: #fff;
+    text-shadow: 0 3px #733f16, 3px 0 #733f16, -3px 0 #733f16, 0 -3px #733f16;
+    white-space: nowrap;
+}
+.helpboard .userscore span {
+    font-weight: bold;
+}
+.helpboard .help-lists {
+    position: absolute;
+    left: .93rem;
+    top: 3.74rem;
+    width: 5.5rem;
+    padding: .2rem .45rem;
+    box-sizing: border-box;
+}
+.helpboard .help-lists p {
+    margin-bottom: .26rem;
+    font-size: .32rem;
+    color: #733f16;
+}
+.helpboard .help-lists li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: .65rem;
+    line-height: .65rem;
+    font-size: .24rem;
+    color: #733f16;
+}
+
+.helpboard .help-lists li strong {
+    margin-right: 8px;
+    font-size: .26rem;
+    color: #ec6a2c;
+}
+.main .link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 9.83rem;
+    left: 0;
+    width: 100%;
+    padding: 0 .45rem;
+    box-sizing: border-box;
+}
+.main .link a {
+    display: block;
+}
+.main .link .help-btn {
+    width: 3.15rem;
+    height: 1.02rem;
+    background: url("../images/help-btn.png") no-repeat center;
+    background-size: cover;
+}
+.main .link .also-btn {
+    width: 3.15rem;
+    height: 1.02rem;
+    background: url("../images/also-btn.png") no-repeat center;
+    background-size: cover;
+}
+.main .link .leader-btn {
+    width: 2.09rem;
+    height: .95rem;
+    background: url("../images/leader-btn.png") no-repeat center;
+    background-size: cover;
+}
+.main .link .again-btn {
+    width: 2.09rem;
+    height: .95rem;
+    background: url("../images/againplay-btn.png") no-repeat center;
+    background-size: cover;
+}
+.main .link .invite-btn {
+    width: 2.09rem;
+    height: .95rem;
+    background: url("../images/invite-btn.png") no-repeat center;
+    background-size: cover;
+}

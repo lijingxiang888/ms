@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>马上出发</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/jquery.flipster.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script>
+        ~function () {
+            var desW = 750;
+
+            function refreshRem() {
+                var doc = document.documentElement;
+                var winW = doc.clientWidth; // 设备宽度
+                doc.style.fontSize = winW / desW * 100 + 'px'; //设置根字体大小
+            }
+
+            refreshRem();//在进入页面时就刷新一次
+            // 改变窗口大小时也要重新计算一次 比如由竖屏切换到横屏
+            window.addEventListener('resize', refreshRem);
+        }();
+    </script>
+</head>
+<body>
+<!--加载页 begin-->
+<div class="main loading" id="loading">
+    <div class="lock"></div>
+    <div class="loading-pic"></div>
+    <div class="loading-percent" id="loading-percent">0%</div>
+    <p class="loading-tip">
+        "为了最佳游戏体验请打开屏幕锁屏"
+    </p>
+</div>
+<!--加载页 end-->
+<!--开始页 begin-->
+<div class="main start" id="start">
+    <div class="logo"></div>
+    <div class="slogan rotate90"></div>
+    <div class="kettle rotate90"></div>
+    <div class="meat rotate90"></div>
+    <div class="pot rotate90"></div>
+    <div class="beef rotate90"></div>
+    <div class="stone rotate90"></div>
+    <div class="start-btn rotate90"></div>
+    <div class="role rotate90"></div>
+</div>
+<!--开始页 end-->
+<!--选择马匹 begin-->
+<div class="main change" id="change">
+    <div class="horse-name rotate90">
+        西乌珠穆沁旗白马
+    </div>
+    <div class="flipster">
+        <ul>
+            <li class="black">
+                <img src="images/horse1.png" alt="百岔铁蹄马">
+            </li>
+            <li class="white">
+                <img src="images/horse3.png" alt="西乌珠穆沁旗白马">
+            </li>
+            <li class="yellow">
+                <img src="images/horse2.png" alt="三河马">
+            </li>
+        </ul>
+    </div>
+    <a class="arrow-left" href="javascript:;"></a>
+    <a class="arrow-right" href="javascript:;"></a>
+    <div class="finger"></div>
+    <div class="tip black-tip">
+        <div class="tip-content rotate90">
+            <div class="wrapper">
+                <h3>百岔铁蹄马</h3>
+                <p>
+                    成吉思汗最宠爱的两匹坐骑便是西乌珠穆沁白马，只繁殖在西乌珠穆沁草原上，自幼受到严格的训练，十分勇猛，是成吉思汗南征金国时，路过西乌珠穆沁草原而得到的。当成吉思汗再次途径西乌珠穆沁草原时，两匹白马因倦恋故乡，趁成吉思汗休息时跑出军营。后来，成吉思汗亲自登上一座山峰，发现白马正在数百里外吃草。失而复得的喜悦使成吉思汗更加珍爱这两匹白马，便赐这座山峰名为“斯日古楞日阿图山”，蒙语为“慧眼山”。</p>
+            </div>
+            <a class="close-btn" href="javascript:;"></a>
+            <a class="begin-btn" href="javascript:;"></a>
+        </div>
+    </div>
+    <div class="tip white-tip">
+        <div class="tip-content rotate90">
+            <div class="wrapper" id="wrapper">
+                <h3>西乌珠穆沁旗白马</h3>
+                <p>百岔铁蹄马产于赤峰市克什克腾旗百岔山地区，是唯一不需挂掌的蒙古马。据说百岔铁蹄马原本是成吉思汗禁卫军的专用马，因蹄小坚硬、圆而厚实、不易裂缝，在乱石遍布的崎岖山路上如履平地</p>
+                <p>
+                    相传，“千里疾风万里霞，追不上白岔的铁蹄马!”而当它参加比赛，“马身一纵，颈一伸，四蹄甩开飞也似的向前追去。乍看如闪电，再瞧似旋风，后蹄踢起的山石有碗大，在半空飞舞，看的人都惊呆了。同呼：“真是铁蹄一般!”</p>
+            </div>
+            <a class="close-btn" href="javascript:;"></a>
+            <a class="begin-btn" href="javascript:;"></a>
+        </div>
+    </div>
+    <div class="tip yellow-tip">
+        <div class="tip-content rotate90">
+            <div class="wrapper">
+                <h3>三河马</h3>
+                <p>
+                    三河马主产于内蒙古呼伦贝尔三河地区，外貌清秀，体质结实，动作灵敏，具有奔跑速度快、挽力大、持久力强等特点，是优良的乘挽兼用型马，曾被周恩来总理誉为“中国马的优良品种”。在现有记录中，三河马是中国唯一可与国外名马同场竞技的国产马。</p>
+            </div>
+            <a class="close-btn" href="javascript:;"></a>
+            <a class="begin-btn" href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+<!--选择马匹 end-->
+<!--游戏界面 begin-->
+<div class="main game">
+    <div class="game-tip">
+        <p class="tip-content">
+            <img src="images/tip.png" alt="活动规则">
+        </p>
+        <button id="close"></button>
+    </div>
+    <div class="scoreboard">
+        <a href="javascript:;">
+            <img src="images/avatar.png" alt="用户头像">
+        </a>
+        <span class="score rotate90">123456</span>
+    </div>
+    <div class="areaboard">
+        <span class="rotate90">呼伦贝尔市</span>
+    </div>
+    <div class="food-wrap">
+        <div class="food"></div>
+        <div class="food"></div>
+        <div class="food"></div>
+    </div>
+    <div class="gameover-tip">
+        <p class="total rotate90">分数：<span>827659</span></p>
+        <a class="play-again rotate90" href="javascript:;"></a>
+        <a class="leader-board rotate90" href="javascript:;"></a>
+        <a class="invite-btn-green rotate90" href="javascript:;"></a>
+    </div>
+</div>
+<!--游戏界面 end-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fastclick.js"></script>
+<script src="js/jquery.flipster.js"></script>
+<script>
+    /*加载页loading动画*/
+    ~function () {
+        var loadWrap = document.getElementById('loading');
+        var lp = document.getElementById('loading-percent');
+        var lpNum = parseInt(lp.innerText);
+
+        function loadingSum() {
+
+            if (lpNum >= 99) {
+                window.clearInterval(timer);
+                loadWrap.style.display = 'none';
+            }
+            lpNum += 3;
+            lp.innerText = lpNum + '%';
+        }
+
+        var timer = window.setInterval(loadingSum, 50);
+    }();
+    /*游戏开始页面点击事件*/
+    $(function () {
+        $('.start-btn').click(function () {
+            $('#start').css('display', 'none')
+        })
+    });
+    /*点击马匹弹出介绍*/
+    $(function () {
+        function whiteClick() {
+            if ($(this).hasClass('flip-current')) {
+                $('.white-tip').css('display', 'block');
+
+            } else {
+                $('.white-tip').css('display', 'none');
+            }
+            $('.horse-name').text('西乌珠穆沁旗白马');
+        }
+
+        function yellowClick() {
+            if ($(this).hasClass('flip-current')) {
+                $('.yellow-tip').css('display', 'block');
+            } else {
+                $('.yellow-tip').css('display', 'none');
+            }
+            $('.horse-name').text('三河马');
+        }
+
+        function blackClick() {
+            if ($(this).hasClass('flip-current')) {
+                $('.black-tip').css('display', 'block');
+            } else {
+                $('.black-tip').css('display', 'none');
+            }
+            $('.horse-name').text('百岔铁蹄马');
+        }
+
+        $('.white').on('click', whiteClick);
+        $('.black').on('click', blackClick);
+        $('.yellow').on('click', yellowClick);
+
+        $('.close-btn').click(function () {
+            $(this).parents('.tip').css('display', 'none')
+        });
+        $('.begin-btn').click(function () {
+            $('#change').css('display', 'none')
+        })
+    });
+    /*重新选择马匹*/
+    $(function () {
+        $('#close').click(function () {
+            $(this).parent().css('display', 'none')
+        })
+    })
+</script>
+<script>
+    /*FastClick插件的使用*/
+    $(function () {
+        FastClick.attach(document.body);
+    });
+    /*flipster插件的使用*/
+    $(function () {
+        $('.flipster').flipster({
+            itemContainer: 'ul', // 旋转木马元素项容器，默认为ul。
+            itemSelector: 'li', // itemContainer的子元素，默认为li。
+            style: 'carousel', // 在“coverflow”和“carousel”模式之间切换，默认为“coverflow”模式。
+            start: 'center', // 设置旋转木马的开始项并使它居中显示。
+            enableKeyboard: true, // 是否允许使用左右箭头按键来导航旋转木马，默认为true。
+            enableMousewheel: true, // 是否允许使用鼠标滚动来导航旋转木马，默认为true。
+            enableTouch: false, // 是否允许触摸滑动来导航旋转木马，默认为true。
+
+            enableNav: false, // 如果设置为true，插件会插入一个项目类别和标题的无序列表来制作导航效果。默认为false。
+            enableNavButtons: false, // 如果设置为true，插件会插入“Previous”和“Next”链接来前后导航旋转木马。
+
+            onItemSwitch: function () {
+                var horseName = $('.flip-current').find('img').attr('alt');
+                $('.horse-name').text(horseName)
+            }, // Callback function when items are switches
+        });
+        window.addEventListener('resize', function () {
+            $('.flipster').flipster({
+                itemContainer: 'ul', // 旋转木马元素项容器，默认为ul。
+                itemSelector: 'li', // itemContainer的子元素，默认为li。
+                style: 'carousel', // 在“coverflow”和“carousel”模式之间切换，默认为“coverflow”模式。
+                start: 'center', // 设置旋转木马的开始项并使它居中显示。
+
+                enableKeyboard: true, // 是否允许使用左右箭头按键来导航旋转木马，默认为true。
+                enableMousewheel: true, // 是否允许使用鼠标滚动来导航旋转木马，默认为true。
+                enableTouch: true, // 是否允许触摸滑动来导航旋转木马，默认为true。
+
+                enableNav: false, // 如果设置为true，插件会插入一个项目类别和标题的无序列表来制作导航效果。默认为false。
+                enableNavButtons: false, // 如果设置为true，插件会插入“Previous”和“Next”链接来前后导航旋转木马。
+
+                onItemSwitch: function () {
+
+
+                }, // Callback function when items are switches
+            });
+        });
+    });
+</script>
+<script>
+    $(function () {
+        function refreshhorse() {
+            var $horse = $('.flipster'),
+                $horseH = $horse.height(), //181
+                $horseW = $horse.width();  //414  没旋转的
+            console.log($horseH);
+            $horse.css({
+//                'height': $horseH,
+//                'width': $horseW,
+//                'marginLeft': $horseW / 2 * -1,
+//                'marginTop': $horseH / 2 * -1
+            })
+        }
+
+        refreshhorse();
+        window.addEventListener('resize', refreshhorse);
+    })
+
+
+</script>
+</body>
+</html>
