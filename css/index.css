@@ -87,8 +87,8 @@ html,body {
 /*}*/
 .start .logo {
     position: absolute;
-    /*right: 0;*/
-    /*top: .8rem;*/
+    top: .48rem;
+    right: .34rem;
     width: .91rem;
     height: 1.38rem;
     background: url("../images/logo.png") no-repeat center;
@@ -96,90 +96,83 @@ html,body {
 }
 .start .slogan {
     position: absolute;
-    right: -5rem;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 5.03rem;
-    height: 1.75rem;
+    top: 3.84rem;
+    right: 1rem;
+    width: 1.75rem;
+    height: 5.03rem;
     background: url("../images/slogan.png") no-repeat center;
     background-size: cover;
-    z-index: 10;
+    z-index: 8;
 }
 .start .kettle {
     position: absolute;
-    left: 3.32rem;
-    top: 3.88rem;
-    width: 1rem;
-    height: .98rem;
-    background: url("../images/shuihu.png") no-repeat center;
+    left: 3.37rem;
+    top: 3.39rem;
+    width: .98rem;
+    height: 1rem;
+    background: url("../images/shuihu.png") no-repeat;
     background-size: cover;
     z-index: 10;
 }
 .start .meat {
     position: absolute;
-    top: 7.84rem;
-    left: 3.56rem;
-    width: 1.63rem;
-    height: 1.07rem;
-    background: url("../images/meat.png") no-repeat center;
+    bottom: 3.4rem;
+    right: 2.8rem;
+    width: 1.06rem;
+    height: 1.63rem;
+    background: url("../images/meat.png") no-repeat;
     background-size: cover;
     z-index: 10;
 }
 .start .pot {
     position: absolute;
-    left: 1.6rem;
-    bottom: 3rem;
-    width: 1.18rem;
-    height: 1.1rem;
+    left: 1.77rem;
+    bottom: 2.69rem;
+    width: 1.1rem;
+    height: 1.18rem;
     background: url("../images/guo.png") no-repeat center;
     background-size: cover;
     z-index: 10;
 }
 .start .beef {
     position: absolute;
-    left: .2rem;
-    top: 3.7rem;
-    width: 2.09rem;
-    height: 1.55rem;
-    background: url("../images/beef.png") no-repeat center;
+    top: 3.4rem;
+    left:.4rem;
+    width: 1.55rem;
+    height: 2.09rem;
+    background: url("../images/beef.png") no-repeat;
     background-size: cover;
     z-index: 10;
 }
 .start .stone {
     position: absolute;
-    left: -1.2rem;
-    top: 6rem;
-    width: 5.45rem;
-    height: 2.98rem;
+    left: 0;
+    top: 4.9rem;
+    width: 2.98rem;
+    height: 5.45rem;
     background: url("../images/stone.png") no-repeat center;
     background-size: cover;
     z-index: 10;
 }
 .start .start-btn {
     position: absolute;
-    left: -5rem;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 4.72rem;
-    height: .95rem;
-    background: url("../images/strat-btn.png") no-repeat center;
+    top: 50%;
+    left: 50%;
+    width: .95rem;
+    height: 4.72rem;
+    margin-left: -3rem;
+    margin-top: -2.8rem;
+    background: url("../images/strat-btn.png") no-repeat;
     background-size: cover;
     z-index: 10;
 }
 .start .role {
     position: absolute;
-    left: -1.8rem;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 5.39rem;
-    height: 5.48rem;
-    background: url("../images/role.png") no-repeat center;
+    left: 0;
+    top: 1.5rem;
+    width: 6.15rem;
+    height: 9.31rem;
+    background: url("../images/role.png") no-repeat;
     background-size: cover;
     z-index: 9;
 }
@@ -204,25 +197,25 @@ html,body {
     background-size: cover;
 }
 .flipster {
-    /*position: absolute;*/
-    /*width: 8rem;*/
-    /*height: 4rem;*/
-    /*!*left: 50%;*!*/
-    /*!*top: 50%;*!*/
-    /*box-sizing: border-box;*/
+    position: absolute;
+    /*left: 50px;*/
+    /*top: 243px;*/
+    left: 46%;
+    top: 50%;
+    box-sizing: border-box;
+}
+.flip-items {
+    width: 4.5rem;
+
 }
 .flip-item {
-    /*width: 3.2rem;*/
-    /*height: 3.28rem;*/
-    /*padding: 0 .5rem;*/
-    border: none;
-    background: none;
+
+}
+.flip-item .flip-content {
+
 }
 .flipster-carousel .flip-items img {
-    /*display: block;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*box-shadow: none;*/
+    box-shadow: none;
 }
 .flipster-carousel .flip-prev {
     transform: translateX(-60%) translateZ(0) rotateY(40deg) scale(0.8);
@@ -230,18 +223,10 @@ html,body {
 .flipster-carousel .flip-next {
     transform: translateX(60%) translateZ(0) rotateY(-40deg) scale(0.8);
 }
-
-.flipster li img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
 .change .arrow-left {
     position: absolute;
-    left: 40%;
-    top: 40%;
-    margin-left: -.15rem;
-    margin-top: -.35rem;
+    left: 3.66rem;
+    top: 4.38rem;
     display: block;
     width: .3rem;
     height: .7rem;
@@ -251,10 +236,8 @@ html,body {
 }
 .change .arrow-right {
     position: absolute;
-    left: 40%;
-    top: 62%;
-    margin-left: -.15rem;
-    margin-top: -.35rem;
+    left: 3.66rem;
+    bottom: 4.38rem;
     display: block;
     width: .3rem;
     height: .7rem;

@@ -9,17 +9,15 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/jquery.flipster.css">
-    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/index.css">
     <script>
         ~function () {
             var desW = 750;
-
             function refreshRem() {
                 var doc = document.documentElement;
                 var winW = doc.clientWidth; // 设备宽度
                 doc.style.fontSize = winW / desW * 100 + 'px'; //设置根字体大小
             }
-
             refreshRem();//在进入页面时就刷新一次
             // 改变窗口大小时也要重新计算一次 比如由竖屏切换到横屏
             window.addEventListener('resize', refreshRem);
@@ -28,34 +26,34 @@
 </head>
 <body>
 <!--加载页 begin-->
-<div class="main loading" id="loading">
-    <div class="lock"></div>
-    <div class="loading-pic"></div>
-    <div class="loading-percent" id="loading-percent">0%</div>
-    <p class="loading-tip">
-        "为了最佳游戏体验请打开屏幕锁屏"
-    </p>
-</div>
+<!--<div class="main loading" id="loading">-->
+    <!--<div class="lock"></div>-->
+    <!--<div class="loading-pic"></div>-->
+    <!--<div class="loading-percent" id="loading-percent">0%</div>-->
+    <!--<p class="loading-tip">-->
+        <!--"为了最佳游戏体验请打开屏幕锁屏"-->
+    <!--</p>-->
+<!--</div>-->
 <!--加载页 end-->
 <!--开始页 begin-->
-<div class="main start" id="start">
-    <div class="logo"></div>
-    <div class="slogan rotate90"></div>
-    <div class="kettle rotate90"></div>
-    <div class="meat rotate90"></div>
-    <div class="pot rotate90"></div>
-    <div class="beef rotate90"></div>
-    <div class="stone rotate90"></div>
-    <div class="start-btn rotate90"></div>
-    <div class="role rotate90"></div>
-</div>
+<!--<div class="main start" id="start">-->
+    <!--<div class="logo"></div>-->
+    <!--<div class="slogan"></div>-->
+    <!--<div class="kettle"></div>-->
+    <!--<div class="meat"></div>-->
+    <!--<div class="pot"></div>-->
+    <!--<div class="beef"></div>-->
+    <!--<div class="stone"></div>-->
+    <!--<div class="start-btn"></div>-->
+    <!--<div class="role"></div>-->
+<!--</div>-->
 <!--开始页 end-->
 <!--选择马匹 begin-->
 <div class="main change" id="change">
     <div class="horse-name rotate90">
         西乌珠穆沁旗白马
     </div>
-    <div class="flipster">
+    <div class="flipster rotate90">
         <ul>
             <li class="black">
                 <img src="images/horse1.png" alt="百岔铁蹄马">
@@ -142,23 +140,23 @@
 <script src="js/jquery.flipster.js"></script>
 <script>
     /*加载页loading动画*/
-    ~function () {
-        var loadWrap = document.getElementById('loading');
-        var lp = document.getElementById('loading-percent');
-        var lpNum = parseInt(lp.innerText);
-
-        function loadingSum() {
-
-            if (lpNum >= 99) {
-                window.clearInterval(timer);
-                loadWrap.style.display = 'none';
-            }
-            lpNum += 3;
-            lp.innerText = lpNum + '%';
-        }
-
-        var timer = window.setInterval(loadingSum, 50);
-    }();
+//    ~function () {
+//        var loadWrap = document.getElementById('loading');
+//        var lp = document.getElementById('loading-percent');
+//        var lpNum = parseInt(lp.innerText);
+//
+//        function loadingSum() {
+//
+//            if (lpNum >= 99) {
+//                window.clearInterval(timer);
+//                loadWrap.style.display = 'none';
+//            }
+//            lpNum += 3;
+//            lp.innerText = lpNum + '%';
+//        }
+//
+//        var timer = window.setInterval(loadingSum, 50);
+//    }();
     /*游戏开始页面点击事件*/
     $(function () {
         $('.start-btn').click(function () {
@@ -261,17 +259,31 @@
 </script>
 <script>
     $(function () {
+        var curH = $('.flipster .flip-items').height(),
+            curW = $('.flipster .flip-items').width();
+        console.log(curH,curW);
+
+        var $horse = $('.flipster');
+        $horse.css({
+            'height': curH,
+            'width': curW,
+            'marginLeft': curW / 2 * -1,
+            'marginTop': curH / 2 * -1
+        });
+
+
         function refreshhorse() {
-            var $horse = $('.flipster'),
-                $horseH = $horse.height(), //181
-                $horseW = $horse.width();  //414  没旋转的
-            console.log($horseH);
-            $horse.css({
+//            var $horse = $('.flipster'),
+//                $horseH = $horse.height(), //181
+//                $horseW = $horse.width();  //414  没旋转的
+
+            //console.log($horseW)
+            //$horse.css({
 //                'height': $horseH,
 //                'width': $horseW,
 //                'marginLeft': $horseW / 2 * -1,
 //                'marginTop': $horseH / 2 * -1
-            })
+            //})
         }
 
         refreshhorse();
