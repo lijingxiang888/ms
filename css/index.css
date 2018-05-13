@@ -422,7 +422,7 @@ html,body {
     position: absolute;
 }
 .game .food-wrap .food:first-child {
-    top: 2.2rem;
+    top: 3.2rem;
     left: 1.8rem;
     width: 1.56rem;
     height: 1.71rem;
@@ -498,4 +498,39 @@ html,body {
     margin: auto;
     background: url("../images/invite-btn-green.png") no-repeat center;
     background-size: cover;
+}
+.game .horse-run {
+    position: absolute;
+    left: 1rem;
+    top: .3rem;
+    width: 1.9rem;
+    height: 2.5rem;
+    background: url("../images/whiterun.png") no-repeat;
+    /*background: url("../images/whitestop.png") no-repeat center;*/
+    /*background-size: cover;*/
+    -webkit-background-size: 1.9rem 9.99rem;
+    /*-webkit-animation:runAnimate .5s steps(4) infinite;*/
+    /*animation:runAnimate .5s steps(4) infinite;*/
+    /*开启GPU硬件加速*/
+    webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+@-webkit-keyframes runAnimate {
+    0%{
+        background-position:0 0;
+    }
+    100%{
+        background-position:0 -9.99rem;
+    }
+}
+@keyframes runAnimate {
+    0%{
+        background-position:0 0;
+    }
+    100%{
+        background-position:0 -9.99rem;
+    }
 }
