@@ -26,27 +26,27 @@
 </head>
 <body>
 <!--加载页 begin-->
-<!--<div class="main loading" id="loading">-->
-    <!--<div class="lock"></div>-->
-    <!--<div class="loading-pic"></div>-->
-    <!--<div class="loading-percent" id="loading-percent">0%</div>-->
-    <!--<p class="loading-tip">-->
-        <!--"为了最佳游戏体验请打开屏幕锁屏"-->
-    <!--</p>-->
-<!--</div>-->
+<div class="main loading" id="loading">
+    <div class="lock"></div>
+    <div class="loading-pic"></div>
+    <div class="loading-percent" id="loading-percent">0%</div>
+    <p class="loading-tip">
+        "为了最佳游戏体验请打开屏幕锁屏"
+    </p>
+</div>
 <!--加载页 end-->
 <!--开始页 begin-->
-<!--<div class="main start" id="start">-->
-    <!--<div class="logo"></div>-->
-    <!--<div class="slogan"></div>-->
-    <!--<div class="kettle"></div>-->
-    <!--<div class="meat"></div>-->
-    <!--<div class="pot"></div>-->
-    <!--<div class="beef"></div>-->
-    <!--<div class="stone"></div>-->
-    <!--<div class="start-btn"></div>-->
-    <!--<div class="role"></div>-->
-<!--</div>-->
+<div class="main start" id="start">
+    <div class="logo"></div>
+    <div class="slogan"></div>
+    <div class="kettle"></div>
+    <div class="meat"></div>
+    <div class="pot"></div>
+    <div class="beef"></div>
+    <div class="stone"></div>
+    <div class="start-btn"></div>
+    <div class="role"></div>
+</div>
 <!--开始页 end-->
 <!--选择马匹 begin-->
 <div class="main change" id="change">
@@ -140,23 +140,23 @@
 <script src="js/jquery.flipster.js"></script>
 <script>
     /*加载页loading动画*/
-//    ~function () {
-//        var loadWrap = document.getElementById('loading');
-//        var lp = document.getElementById('loading-percent');
-//        var lpNum = parseInt(lp.innerText);
-//
-//        function loadingSum() {
-//
-//            if (lpNum >= 99) {
-//                window.clearInterval(timer);
-//                loadWrap.style.display = 'none';
-//            }
-//            lpNum += 3;
-//            lp.innerText = lpNum + '%';
-//        }
-//
-//        var timer = window.setInterval(loadingSum, 50);
-//    }();
+    ~function () {
+        var loadWrap = document.getElementById('loading');
+        var lp = document.getElementById('loading-percent');
+        var lpNum = parseInt(lp.innerText);
+
+        function loadingSum() {
+
+            if (lpNum >= 99) {
+                window.clearInterval(timer);
+                loadWrap.style.display = 'none';
+            }
+            lpNum += 3;
+            lp.innerText = lpNum + '%';
+        }
+
+        var timer = window.setInterval(loadingSum, 50);
+    }();
     /*游戏开始页面点击事件*/
     $(function () {
         $('.start-btn').click(function () {
@@ -270,27 +270,7 @@
             'marginLeft': curW / 2 * -1,
             'marginTop': curH / 2 * -1
         });
-
-
-        function refreshhorse() {
-//            var $horse = $('.flipster'),
-//                $horseH = $horse.height(), //181
-//                $horseW = $horse.width();  //414  没旋转的
-
-            //console.log($horseW)
-            //$horse.css({
-//                'height': $horseH,
-//                'width': $horseW,
-//                'marginLeft': $horseW / 2 * -1,
-//                'marginTop': $horseH / 2 * -1
-            //})
-        }
-
-        refreshhorse();
-        window.addEventListener('resize', refreshhorse);
     })
-
-
 </script>
 </body>
 </html>
